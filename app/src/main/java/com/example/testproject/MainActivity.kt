@@ -31,16 +31,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TestProjectTheme {
-                // on below line we are specifying
-                // background color for our application
+
                Surface(
                     modifier = Modifier.fillMaxSize(),
 
                 ) {
-                    // on below line we are specifying theme as scaffold.
+
                    run {
-                       // on below line we are calling proximity
-                       // sensor method to use proximity sensor.
+
                        DisplaySensors()
                    }
                 }
@@ -57,18 +55,14 @@ fun DisplaySensors() {
 
     // on below line we are creating a column
     Column(
-        // on below line we are specifying modifier
-        // and setting max height and max width
-        // for our column
+
         modifier = Modifier
             .fillMaxSize()
             .fillMaxHeight()
             .fillMaxWidth()
-            // on below line we are
-            // adding padding for our column
+
             .padding(5.dp),
-        // on below line we are specifying horizontal
-        // and vertical alignment for our column
+
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -85,17 +79,10 @@ fun DisplaySensors() {
         // in which we are displaying a text as Object is
         Text(
             text = "Sensors in Devices are : ",
-            // on below line we are setting text color
+
             color = Color.Black,
-
-            // on below line we are specifying font weight
             fontWeight = FontWeight.Bold,
-
-            // on below line we are specifying font family.
             fontFamily = FontFamily.Default,
-
-            // on below line we are specifying
-            // font size and padding from all sides.
             fontSize = 20.sp, modifier = Modifier.padding(5.dp)
         )
 
@@ -108,25 +95,13 @@ fun DisplaySensors() {
             sensorsData = sensorsData + sens.name + " \n\n"
         }
 
-        // on below line we are creating a simple text
-        // in which we are displaying a text as all
-        // sensors in device
         Text(
             text = sensorsData,
-            // on below line we are setting text color
+
             color = Color.Black,
-
-            // on below line we are specifying font weight
             fontWeight = FontWeight.Black,
-
-            // on below line we are specifying font family.
             fontFamily = FontFamily.Default,
-
-            // on below line adding text alignment.
             textAlign = TextAlign.Center,
-
-            // on below line we are specifying
-            // font size and padding from all sides.
             fontSize = 12.sp,
             modifier = Modifier.padding(5.dp)
         )
