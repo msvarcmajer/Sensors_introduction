@@ -61,7 +61,7 @@ fun DisplaySensors() {
             .fillMaxHeight()
             .fillMaxWidth()
 
-            .padding(5.dp),
+            .padding(7.dp),
 
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
