@@ -8,6 +8,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -60,7 +62,7 @@ fun DisplaySensors() {
             .fillMaxSize()
             .fillMaxHeight()
             .fillMaxWidth()
-
+            .verticalScroll(rememberScrollState())
             .padding(7.dp),
 
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -92,7 +94,7 @@ fun DisplaySensors() {
         // on below line adding all sensors from
         // device sensors in our variable.
         for (sens in deviceSensors) {
-            sensorsData = sensorsData + sens.name + " \n\n"
+            sensorsData = sensorsData + sens.name + " \n"
         }
 
         Text(
